@@ -24,3 +24,25 @@ Workshop de [**MEAN**](http://mean.io/) ([MongoDb](https://www.mongodb.org/), [E
 
 ===
 
+###Exercícios
+
+===
+
+###Aula 01
+
+
+
+**Node.js** Pode ser considerado uma plataforma de execução de aplicações JavaScript no lado do servidor.
+
+####Event Loop
+
+#####Libuv
+
+#####I/O Async
+
+#####Thread Pool
+
+#####Event Driven
+
+
+
