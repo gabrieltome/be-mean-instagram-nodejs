@@ -18,11 +18,11 @@ var fs = require('fs');for(var i = 1; i <= 5; i++) {  var file = "async-txt" +
 ```
 
 
-##2. Como o V8 executa JavaScript? Demonstre 1 exemplo com código ou imagem.
+##2. Como o V8 executa JavaScript? Demonstre 1 exemplo com código ou imagem
 
-![image](/Users/gabrieltome/Desktop/v8-execute-js.png)
+![image](http://runtimejs.org/jsconf/img/runtimejs-arch.png)
 
-![image](/Users/gabrieltome/Dropbox/Capturas de tela/Captura de tela 2016-05-02 22.35.59.png)
+![image](https://camo.githubusercontent.com/c997d19ed67fc0ed69e91cf5e6d43489d767ac60/687474703a2f2f322e62702e626c6f6773706f742e636f6d2f2d576b33436a7a55667375672f56564835492d336d726b492f414141414141414141526b2f78464e5a7a626d5155466b2f73313630302f6c6f6f70322e706e67)
 
 ##3. Qual a diferença entre um sistema single para um multi-thread?
 
