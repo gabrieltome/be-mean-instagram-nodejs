@@ -14,7 +14,19 @@ const http = require('http')
   ;
 
 http.createServer(function (request, response){
-if (request.url === '/api/v1') {
+if (request.url === '/api/rota01') {
+  response.writeHead(200, {'Content-Type':'application/json'});
+  response.write(JSON.stringify(SUCCESS));
+}
+if (request.url === '/api/rota02') {
+  response.writeHead(200, {'Content-Type':'application/json'});
+  response.write(JSON.stringify(SUCCESS));
+}
+if (request.url === '/api/rota03') {
+  response.writeHead(200, {'Content-Type':'application/json'});
+  response.write(JSON.stringify(SUCCESS));
+}
+if (request.url === '/api/rota04') {
   response.writeHead(200, {'Content-Type':'application/json'});
   response.write(JSON.stringify(SUCCESS));
 }
@@ -25,4 +37,4 @@ else {
 response.end();
 }).listen(3000, function (){
   console.log('Servidor rodando em localhost:3000');
-})
+});
