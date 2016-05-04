@@ -102,7 +102,7 @@ São divididos em:
 
 **4XX Erro do cliente** -> O nome já fala por si só. :p
 
-**5XX Erro do Servidor** -< O servidor não consegue atender o pedido por algum erro. Também não permitirá a indexação da página.
+**5XX Erro do Servidor** -> O servidor não consegue atender o pedido por algum erro. Também não permitirá a indexação da página.
 
 
 
