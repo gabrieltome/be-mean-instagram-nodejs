@@ -206,9 +206,15 @@ http.createServer(function (request, response){
 
 ####Rotas
 
+[Um exemplo do uso de rotas](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/routes/server.js)
+
 #####QueryString 
 
 Querystring é o padrão que o protocolo HTTP utiliza para transporte de informações do cliente para o servidor. Devemos utilizar a query para filtrar dados. A sintaxe de uma query string é =. Indicamos que vamos concatenar mais uma busca após outra com o caracter &(e comercial). O início da query string é indicado pelo caractere ? (interrogação).
+
+[Exemplo utilizando QueryString](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/hello-querystring.js)
+
+
 
 
 
