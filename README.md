@@ -23,6 +23,24 @@ Workshop de [**MEAN**](http://mean.io/) ([MongoDb](https://www.mongodb.org/), [E
 [Code Style](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/code-style.md)
 
 ===
+===
+DICA PARA MANTER O REPO FORKADO SINCRONIZADO
+
+```
+git remote add upstream [ENDEREÇO DO REPOSITÓRIO PRINCIPAL]
+```
+Depois, para sincronizar os repositórios, execute o comando:
+
+```
+git fetch upstream
+```
+depois
+
+```
+git merge upstream/master
+```
+===
+===
 
 ###Exercícios
 
