@@ -46,17 +46,17 @@ git merge upstream/master
 
 ===
 
-###Aula 01
+##Aula 01
 
 **Node.js®** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
 
-####Event Loop
+###Event Loop
 
 O Event-Loop é o agente responsável por escutar e emitir eventos no sistema. Na prática ele é um loop infinito que a cada iteração verifica em sua fila de eventos se um determinado evento foi emitido. Quando ocorre, é emitido um evento. Ele o executa e envia para fila de executados. Quando um evento está em execução, nós podemos programar qualquer lógica dentro dele e isso tudo acontece graças ao mecanismo de função callback do Javascript.
 
 Fonte: Livro - Aplicações Web Real Time com Node.js - Casa do Código
 
-#####Libuv
+###Libuv
 
 A libuv é uma biblioteca multi-plataforma responsável pela realização de I/O assíncrono, fornecendo a implementação do event loop e do thread pool, juntamente com o suporte a TCP e UDP socket, resolução de DNS, sistema de arquivos, processos, entre outras.
 
@@ -67,9 +67,9 @@ A libuv é uma biblioteca multi-plataforma responsável pela realização de I/O
 #####Event Driven
 
 
-###Aula 02
+##Aula 02
 
-#####HTTP
+###HTTP
 
 É o principal módulo da aplicação, pois através dele que criamos um servidor web para fornecer o sistema.
 
@@ -85,7 +85,7 @@ Para cada requisição enviada, possui cabeçalhos que dizem o que essa requisi�
 
 O cliente envia uma requisição com um **verbo HTTP** e seus cabeçalhos, depois de recebida e tratada, o servidor responde com um **STATUS CODE** e seus cabeçalhos.
 
-#####Methods
+####Methods
 
 O protocolo HTTP possui um conjunto de métodos/verbos que o cliente pode executar.
 
@@ -105,7 +105,7 @@ O protocolo HTTP possui um conjunto de métodos/verbos que o cliente pode execut
 
 **PATCH**: aplica modificações parciais a um recurso.
 
-#####STATUS CODE
+####STATUS CODE
 
 Os **códigos de retorno** HTTP são compostos por 3 dígitos que seguem um formato padrão dando melhor direcionamento para a identificação correta do retorno.
 
@@ -124,7 +124,7 @@ São divididos em:
 
 
 
-####createServer
+###createServer
 
 
 Para iniciarmos um servidor HTTP utilizamos a função **createServer**, que recebe uma função com dois parâmetros:
@@ -204,7 +204,7 @@ http.createServer(function (request, response){
 
 ```
 
-####Rotas
+###Rotas
 
 [Um exemplo do uso de rotas](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/routes/server.js)
 
@@ -217,10 +217,10 @@ Querystring é o padrão que o protocolo HTTP utiliza para transporte de informa
 
 
 
-### Aula 03
+## Aula 03
 
 
-####GET
+###GET
 
 ```
 http.get({
@@ -233,7 +233,7 @@ http.get({
 })
 ```
 
-Exemplo:
+[Exemplo](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/hello-get-localhost-querystring.js)
 
 ```
 const http = require('http');
@@ -274,7 +274,7 @@ O **IncomingMessage** implementa a interface de **Readable Stream**, que nos dá
 - **error**: evento emitido quando acontecer algum erro.
 
 
-####request
+###REQUEST
 
 Primeiro criamos um JSON de configuração:
 
@@ -312,9 +312,9 @@ Então passamos o JSON de configuração e o *callback* para o **request**:
 const req = http.request(options, callback);
 ```
 
-[Exemplo completo](http://)
+[Exemplo completo](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request.js)
 
-####Create - POST
+###Create - POST
 
 
 
