@@ -36,5 +36,5 @@ req.on('error', (e) => {
   console.log('ERRO:' + e.message);
 });
 
-//finalizando...
+//finalizando
 req.end();

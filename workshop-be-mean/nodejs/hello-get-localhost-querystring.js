@@ -1,7 +1,6 @@
 'use strict';
 
 const http = require('http');
-
 http.get({
     hostname: 'localhost',
     path: '/user?name=Gabriel&aluno=true&age=27',
@@ -15,7 +14,7 @@ http.get({
   response.on('data', function(data){
     body += data;
   });
-  
+
   response.on('end', function(){
     console.log('Resposta:', body);
   });
