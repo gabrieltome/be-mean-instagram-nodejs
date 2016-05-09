@@ -217,17 +217,104 @@ Querystring é o padrão que o protocolo HTTP utiliza para transporte de informa
 
 
 
+### Aula 03
 
 
+####GET
+
+```
+http.get({
+  hostname: 'localhost',
+  port: 80,
+  path: '/',
+  agent: false // criar um novo agente para este pedido
+}, function(res) {
+  // faça algo com 'res'
+})
+```
+
+Exemplo:
+
+```
+const http = require('http');
+
+http.get({
+    hostname: 'localhost',
+    path: '/user?name=Gabriel&aluno=true&age=27',
+    port: 3000,
+    agent: false
+}, (response) => {
+  let body = '';
+  console.log('STATUS:' + response.statusCode);
+  console.log('HEADERS:' + response.headers);
+
+  response.on('data', function(data){
+    body += data;
+  });
+  
+  response.on('end', function(){
+    console.log('Resposta:', body);
+  });
+
+});
+```
+
+`A única diferença entre o **http.get()** e **http.request** é que o **get()** seta o valor do verbo para **GET** e chama o **req.end()** automaticamente.`
+
+####IncomingMessage
+
+É um objeto criado por **http.Server** ou **http.ClientRequest** e passado como o primeiro argumento para o **request** e **response**, respectivamente.
+Ele pode ser usado para acessar resposta de status, os cabeçalhos e os dados em si.
+
+O **IncomingMessage** implementa a interface de **Readable Stream**, que nos dá alguns eventos importantes:
+
+- **close**: evento emitido quando qualquer tipo de stream foi fechada;
+- **data**: evento que recebe os dados da *Stream*;
+- **end**: evento emitido quando não há mais dados para ler;
+- **error**: evento emitido quando acontecer algum erro.
 
 
+####request
 
+Primeiro criamos um JSON de configuração:
 
+```
+const options = {
+  host: 'api.redtube.com',
+  path: '/?data=redtube.Videos.searchVideos&search=Sasha%20Gray'
+};
+```
 
+Depois criamos a função de *callback*:
 
+```
+function callback(res) {
+  console.log('STATUS:' + res.statusCode);
+  console.log('HEADERS:' + JSON.stringify(res.headers));
 
+  let data = '';
 
+  res.setEncoding('utf8');
 
+  res.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  res.on('end', () => {
+    console.log('Dados finalizados:', data);
+  });
+}
+```
+
+Então passamos o JSON de configuração e o *callback* para o **request**:
+
+```
+const req = http.request(options, callback);
+```
+
+[Exemplo completo](http://)
+
+####Create - POST
 
 
 
