@@ -316,9 +316,74 @@ const req = http.request(options, callback);
 
 ###Create - POST
 
+Primeiro requisitamos um novo módulo, o `querystring`.
+
+```
+const querystring = require('querystring');
+```
+
+O módulo `querystring` converte os dados para o formato *QueryString*, que é um padrão utilizado pelo protocolo http para transporte de informações (cliente - server ou cliente - cliente).
+
+Padrão `querystring`: **nome_da_variavel=conteudo da variável**
+
+
+Depois colocamos numa constante (*postData*) os valores parseados com *stringify* para serem postados.
+
+```
+const postData = querystring.stringify({
+  name: 'Charmander',
+  type: 'fire'
+});
+```
+
+Depois criamos o objeto JSON de configuração, com os cabeçalhos específicos.
+
+```
+const options = {
+  host: 'webschool-io.herokuapp.com',
+  method: 'POST',
+  path: '/api/pokemons',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded', 
+    'Content-Length': postData.length
+  }
+};
+```
+
+`'Content-Type': 'application/x-www-form-urlencoded',` onde diz a forma que a informação é enviada, e `'Content-Length': postData.length` onde enviamos o tamanho do `postData`.
+
+Depois criamos a função de callback, igual do **GET**.
+
+E então antes de finalizar, escrevemos na requisição os dados do POST
+
+```
+req.write(postData);
+```
+
+[Exemplo](http://)
+
+
+###PUT
+
+Definimos no `postData` o que queremos alterar, e definimos o método para `PUT` e setamos o `id` no **path** no JSON de configuração.
+
+```
+const options = {
+  host: 'webschool-io.herokuapp.com',
+  method: 'PUT', //ALTERANDO O MÉTODO PARA PUT
+  path: '/api/pokemons/5730d38ac5d52f1100eccfb4',  // caminho do objeto a ser alterado
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Length': postData.length
+  }
+};
+```
+
+###DELETE
 
 
 
+ 
 
 
 

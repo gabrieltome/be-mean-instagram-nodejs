@@ -1,16 +1,26 @@
-// create REQUEST
+// DELETE
 
 'use strict';
 
 const http = require('http');
+//requisitando módulo 'querystring'
+const querystring = require('querystring');
+const postData = querystring.stringify({
 
-// JSON options de configuração
+});
+
+//JSON de configuração
 const options = {
   host: 'webschool-io.herokuapp.com',
-  path: '/api/pokemons/'
+  method: 'DELETE', //ALTERANDO O MÉTODO PARA DELETE
+  path: '/api/pokemons/573144500d118e1100e65526', // caminho do objeto a ser DELETADO
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Length': postData.length
+  }
 };
 
-// função de callback
+// função callback
 function callback(res) {
   console.log('STATUS:' + res.statusCode);
   console.log('HEADERS:' + JSON.stringify(res.headers));
@@ -28,13 +38,10 @@ function callback(res) {
   });
 }
 
-// criando a request utilizando options e o callback
 const req = http.request(options, callback);
 
-// cria o error
 req.on('error', (e) => {
   console.log('ERRO:' + e.message);
 });
 
-//finalizando
 req.end();
