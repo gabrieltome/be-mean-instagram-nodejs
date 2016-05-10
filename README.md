@@ -381,9 +381,9 @@ const options = {
 
 ###DELETE
 
+[Exemplo](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-delete.js)
 
 
- 
 
 
 
