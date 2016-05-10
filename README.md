@@ -312,7 +312,7 @@ Então passamos o JSON de configuração e o *callback* para o **request**:
 const req = http.request(options, callback);
 ```
 
-[Exemplo completo](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request.js)
+[Exemplo completo do REQUEST](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request.js)
 
 ###Create - POST
 
@@ -360,7 +360,7 @@ E então antes de finalizar, escrevemos na requisição os dados do POST
 req.write(postData);
 ```
 
-[Exemplo](http://)
+[Exemplo - POST](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-post.js)
 
 
 ###PUT
@@ -379,9 +379,11 @@ const options = {
 };
 ```
 
+[Exemplo - PUT](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-put.js)
+
 ###DELETE
 
-[Exemplo](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-delete.js)
+[Exemplo - Delete](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-delete.js)
 
 
 
