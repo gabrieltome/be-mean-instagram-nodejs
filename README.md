@@ -404,7 +404,148 @@ No **package.json** é onde estão todas as informações do projeto, como:
 - dependências;
 - outros.
 
-Sempre adicione a pasta **node_modules** no **.gitignore**. Porque não devemos enviar as dependências do projeto, ois elas serão instaladas via **NPM**.
+Sempre adicione a pasta **node_modules** no **.gitignore**. Porque não devemos enviar as dependências do projeto, pois elas serão instaladas via **NPM**.
+
+
+####npm init
+
+Inicializa um projeto localmente.
+
+Exemplo de um projeto inicializado:
+
+```
+{
+  "name": "pokemons-api",
+  "version": "0.0.1",
+  "description": "API para nossos Pokemons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pokemons",
+    "nodejs",
+    "mongodb",
+    "webschool"
+  ],
+  "author": "Gabriel Tomé",
+  "license": "WTFPL"
+}
+```
+
+###name
+
+O **nome** e a **versão** no **package.json** são obrigatórios e o package não será instalado sem eles, pois eles formam um identificador.
+
+#####Regras
+
+- precisa ser menor que 214 caracteres;
+- não pode começar com `.` ou `_`;
+- novos **packages** não podem ter letras maiúsculas no nome;
+- não pode conter quaisquer caracteres **non-URL-safe**.
+
+#####Dicas
+
+- não usar mesmo nome de um módulo do  **core do Node**;
+- não utilizar **js** ou **node** no nome;
+- nome curto e descritivo, pois será passado como um argumento no `require()`;
+- verificar se o nome já existe em [npmjs.com](https://www.npmjs.com)
+
+
+###npm install
+
+Instalar algum **módulo/pacote** ou as **dependências listadas no package.json**.
+
+`npm install -g nome_do_modulo`
+
+Instalar um módulo de forma **global** ou **local**(porém sendo módulos diferentes).
+
+Exemplo: `npm install -g gulp`
+
+Com o **-g** é instalado globalmente, para instalar o módulo **localmente** basta executar `npm install nome_do_modulo`.
+Porém dessa forma, o módulo **não** é adicionado no **array de dependências do package.json**.
+
+Para adicionar no **array de dependências** devemos adicionar **--save**.
+
+Exemplo : `npm install --save mongoose`
+
+Para versão específica: `npm install --save modulo@versão` ou seja `npm install --save mongoose@4.0`
+
+Resultado após a adição: 
+
+```
+ "dependencies": {
+    "mongoose": "^4.4.16"
+  }
+```
+
+Para adicionar o módulo no objeto **devDependecies** do package.json: `npm install --save-dev`.
+
+Para instalar apenas as **devDependencies** deve-se executar `npms inatll --dev`, assim não instalará as dependências listadas em **dependencies**.
+
+Exemplo: `npm install --save-dev jasmine`
+
+Resultado:
+
+```
+"dependencies": {
+    "mongoose": "^4.4.16"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  }
+```
+
+`npm install -optional` instala dependências opicionais, que não devem interferir na execução do projeto.
+
+Exemplo: `npm install colors --save-optional`
+
+Resultado:
+
+```
+"dependencies": {
+    "mongoose": "^4.4.16"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  },
+  "optionalDependencies": {
+    "colors": "^1.1.2"
+  }
+```
+
+####npm run
+
+Comando que executa scrips.
+Para automatizar tarefas do projeto.
+
+Uso: `npm run exemplo`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
