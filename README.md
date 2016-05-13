@@ -386,8 +386,25 @@ const options = {
 [Exemplo - Delete](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/http-request-delete.js)
 
 
+##Aula 05
 
+###NPM
 
+O **NPM** é um gerenciador de pacotes de JavaScript.
+
+O **NPM** gerencia o projeto a partir de JSON chamado **package.json**.
+
+No **package.json** é onde estão todas as informações do projeto, como:
+
+- nome;
+- versão;
+- descrição;
+- autor;
+- licença;
+- dependências;
+- outros.
+
+Sempre adicione a pasta **node_modules** no **.gitignore**. Porque não devemos enviar as dependências do projeto, ois elas serão instaladas via **NPM**.
 
 
 
