@@ -527,13 +527,13 @@ Uso: `npm run exemplo`
 
 Módulos globais, estão disponíveis em todos os módulos, onde não é necessário utilizar `require`.
 
-[Exemplo - Globals](http://)
+[Exemplo - Globals](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/globalsexample.js)
 
 ###Process
 
 É um objeto global, uma instância de **EventEmitter**, ou seja, emite aventos.
 
-
+[Exemplo - Process](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/process.js)
 
 
 
