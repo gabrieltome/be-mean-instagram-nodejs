@@ -523,7 +523,15 @@ Uso: `npm run exemplo`
 
 
 
+###Globals
 
+Módulos globais, estão disponíveis em todos os módulos, onde não é necessário utilizar `require`.
+
+[Exemplo - Globals](http://)
+
+###Process
+
+É um objeto global, uma instância de **EventEmitter**, ou seja, emite aventos.
 
 
 

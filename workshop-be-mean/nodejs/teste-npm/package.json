@@ -1,0 +1,17 @@
+{
+  "name": "teste-npm",
+  "version": "1.0.0",
+  "description": "nodejs, script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "roda": "node scripts.js"
+  },
+  "keywords": [
+    "nodejs",
+    "script",
+    "npm"
+  ],
+  "author": "Gabriel",
+  "license": "ISC"
+}
