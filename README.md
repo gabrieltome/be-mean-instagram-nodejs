@@ -538,15 +538,101 @@ Módulos globais, estão disponíveis em todos os módulos, onde não é necess�
 
 
 
+## Aula 06
+
+## Mongoose
+
+O **Mongoose** serve para trabalharmos com **Schema** no **MongoDB** nativamente.
+
+Tudo no **Mongoose** começa com o **Schema**, ele é o **esqueleto da coleção**, é o objeto onde definimos cada campo da coleção com seu tipo, atributos e validação.
+
+#####Criando um SCHEMA com Mongoose
+
+Primeiro importamos o módulo:
+
+```
+const mongoose = require('mongoose');
+```
+
+Depois conectar no MongoDb: 
+
+```
+mongoose.connect('mongodb://localhost/');
+```
+
+Criação do Schema:
+
+```
+const Schema = mongoose.Schema;
+
+const pokemonSchema = new Schema({
+	name: String,
+	description: String,
+	type: String,
+	attack: Number,
+	defense: Number,
+	height: Number
+
+});
+```
 
 
+###Connect
+
+Primeiramente, passamos a *string* de conexão para a função **connect**.
+
+```
+var dbURI = 'mongodb://localhost/database';
+
+mongoose.connect(dbURI);
+```
+
+Para depois trabalharmos com esses 4 eventos (com a função **.on**):
+
+`A função .on está ouvindo esses eventos, por isso executamos a função de callback.`
+
+```
+mongoose.connection.on('connected', function(){
+	console.log('Mongoose default connection connected to ' + dbURI);
+});
+
+mongoose.connection.on('error', function(err){
+	console.log('Mongoose default connection error: ' + err);
+});
+
+mongoose.connection.on('disconnected', function(){
+	console.log('Mongoose default connection disconnected');
+});
+
+mongoose.connection.on('open', function(){
+	console.log('Mongoose default connection is open');
+});
+```
+
+Para fechar a conexão (com a função **.close**):
+
+```
+process.on('SIGINT', function(){
+	mongoose.connection.close(function (){
+		console.log('Mongoose default connection disconnected through app termination.');
+		process.exit(0);
+	});
+});
+```
 
 
+###default - valor padrão no schema
 
+Os tipos diferentes suportados pelo **Schema** do Mongoose:
 
-
-
-
+- String
+- Number
+- Date
+- Buffer
+- Boolean
+- Mixed
+- ObjectId
+- Array
 
 
 
