@@ -11,7 +11,7 @@ const _schema = {
 const pokemonSchema = new Schema(_schema);
 
 const data = {
-	pokemons: ['']
+	pokemons: ['564b1dad25337263280d047a']
 };
 
 var Model = mongoose.model('pokemons', pokemonSchema);
