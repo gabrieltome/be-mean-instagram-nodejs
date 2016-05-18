@@ -625,14 +625,14 @@ process.on('SIGINT', function(){
 
 Os tipos diferentes suportados pelo **Schema** do Mongoose:
 
-- String
-- Number
+- String [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema03.js)
+- Number [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema04.js)
 - Date
 - Buffer
-- Boolean
-- Mixed
-- ObjectId
-- Array
+- Boolean [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema05.js)
+- Mixed [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema06.js)
+- ObjectId [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema07.js)
+- Array [link](https://github.com/gabrieltome/be-mean-instagram-nodejs/blob/master/workshop-be-mean/nodejs/mongoose-pokemons/schema08.js)
 
 O campo **ObjectId** é importantíssimo, pois através dele que fazemos as ligações(RELACIONAMENTO) entre coleções.
 
