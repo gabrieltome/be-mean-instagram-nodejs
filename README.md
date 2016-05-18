@@ -634,6 +634,8 @@ Os tipos diferentes suportados pelo **Schema** do Mongoose:
 - ObjectId
 - Array
 
+O campo **ObjectId** é importantíssimo, pois através dele que fazemos as ligações(RELACIONAMENTO) entre coleções.
+
 
 
 

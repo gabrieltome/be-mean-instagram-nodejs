@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const dbURI = 'mongodb://localhost/pokemons';
 
-mongoose.createConnection(dbURI);
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function(){
 	console.log('Mongoose default connection connected to ' + dbURI);

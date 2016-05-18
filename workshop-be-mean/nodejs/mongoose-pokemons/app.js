@@ -1,2 +1,3 @@
-require('./config');
-const Schema = require('./schema02');
+require('./config.js');
+
+const Schema = require('./schema08.js');
