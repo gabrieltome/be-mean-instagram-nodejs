@@ -6,7 +6,7 @@ const _schema = {
 }
 
 const pokemonSchema = new Schema(_schema);
-const PokemonModel = mongoose.model('Pokemon', pokemonSchema);
+const PokemonModel = mongoose.model('pokemons', pokemonSchema);
 const dataModel = { name: 'Suissamon' };
 const Suissamon = new PokemonModel(dataModel);
 
