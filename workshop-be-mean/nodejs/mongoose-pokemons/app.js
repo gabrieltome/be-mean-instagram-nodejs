@@ -1,3 +1,3 @@
 require('./config.js');
 
-const Schema = require('./model-poke-update');
+const Schema = require('./model-poke-delete');
