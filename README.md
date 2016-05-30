@@ -123,6 +123,6 @@ git merge upstream/master
 
 ###[Eventos](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/events.md)
 
-
+###[Promises](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/promise.md)
 
 
