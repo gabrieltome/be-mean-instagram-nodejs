@@ -126,3 +126,9 @@ git merge upstream/master
 ###[Promises](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/promise.md)
 
 
+##Aula 08
+
+###[Mongoose e Arquitetura Atômica](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/mongoose-atomic-design.md)
+
+
+
