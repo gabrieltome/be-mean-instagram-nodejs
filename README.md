@@ -131,4 +131,11 @@ git merge upstream/master
 ###[Mongoose e Arquitetura Atômica](https://github.com/Webschool-io/be-mean-instagram/blob/master/Apostila/module-nodejs/pt-br/mongoose-atomic-design.md)
 
 
+###Validate
+
+###Getters and Setters
+
+###Virtuals
+
+###Mongoose Plugins
 
